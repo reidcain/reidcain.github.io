@@ -1,3 +1,16 @@
+/* Force saturation for images with class 'image fit main' using attribute selector for specificity */
+.image.fit.main img,
+span[class="image fit main"] img {
+	filter: saturate(5) !important;
+}
+/* Increase saturation for images with class 'image fit main' only inside .spotlight */
+.spotlight .image.fit.main img {
+	filter: saturate(5) !important;
+}
+/* Increase saturation for images with class 'image fit main' only */
+.image.fit.main img {
+	filter: saturate(5);
+}
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
 
@@ -2517,17 +2530,6 @@ input, select, textarea {
 		overflow: hidden;
 	}
 
-		.image:before {
-			content: '';
-			display: block;
-			position: absolute;
-			left: 0;
-			top: 0;
-			background-image: url("images/overlay.png");
-			width: 100%;
-			height: 100%;
-			z-index: 1;
-		}
 
 		.image img {
 			border-radius: 4px;
@@ -3059,15 +3061,6 @@ input, select, textarea {
 			z-index: 20;
 		}
 
-		.spotlight:before {
-			background-image: url("images/overlay.png");
-			content: '';
-			display: block;
-			height: 100%;
-			left: 0;
-			top: 0;
-			width: 100%;
-		}
 
 		.spotlight .image.main {
 			display: none;
@@ -3400,7 +3393,7 @@ input, select, textarea {
 
 		#header nav {
 			position: absolute;
-			right: 1em;
+			right: 4em;
 			top: 0;
 		}
 
@@ -3410,7 +3403,7 @@ input, select, textarea {
 
 				#header nav ul li {
 					display: inline-block;
-					margin-left: 1em;
+					margin-left: 2em;
 				}
 
 					#header nav ul li a, #header nav ul li span {
