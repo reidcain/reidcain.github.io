@@ -1,3 +1,14 @@
+/* Tighter layout for contact icons */
+.icon-row-tight {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+}
+.icon-row-tight section {
+	margin: 0;
+	padding: 0;
+}
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
 
@@ -881,11 +892,11 @@ input, select, textarea {
 			}
 
 			.row.gtr-uniform {
-				margin-top: -2.5em;
+				margin-top: -1em;
 			}
 
 				.row.gtr-uniform > * {
-					padding-top: 2.5em;
+					padding-top: 1em;
 				}
 
 		.row.gtr-150 {
@@ -2186,7 +2197,7 @@ input, select, textarea {
 	}
 
 		header.major:after {
-			background: #e44c65;
+			background: orange;
 			content: '';
 			display: inline-block;
 			height: 0.2em;
@@ -2947,7 +2958,7 @@ input, select, textarea {
 	}
 
 		.goto-next:before {
-			background-image: "images/arrow.svg";
+			background-image: url("images/arrow.svg");
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -2955,11 +2966,12 @@ input, select, textarea {
 			display: block;
 			height: 1.5em;
 			left: 50%;
-			margin: -0.75em 0 0 -1em;
+			margin: -1.51875em 0 0 -2.025em;
 			position: absolute;
 			top: 50%;
-			width: 2em;
+			width: 4.05em;
 			z-index: 1;
+			transform: scale(2.025);
 		}
 
 /* Scrolly link with no arrow icon */
