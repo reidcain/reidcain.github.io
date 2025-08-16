@@ -1,16 +1,3 @@
-/* Force saturation for images with class 'image fit main' using attribute selector for specificity */
-.image.fit.main img,
-span[class="image fit main"] img {
-	filter: saturate(5) !important;
-}
-/* Increase saturation for images with class 'image fit main' only inside .spotlight */
-.spotlight .image.fit.main img {
-	filter: saturate(5) !important;
-}
-/* Increase saturation for images with class 'image fit main' only */
-.image.fit.main img {
-	filter: saturate(5);
-}
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
 
@@ -2423,6 +2410,12 @@ input, select, textarea {
 			padding: 0;
 		}
 
+		/* Remove underline from icon links in .box.alt */
+		.box.alt a,
+		.box.alt a img {
+			border-bottom: none;
+		}
+
 /* Icon */
 
 	.icon {
@@ -2954,7 +2947,7 @@ input, select, textarea {
 	}
 
 		.goto-next:before {
-			background-image: url("images/arrow.svg");
+			background-image: "images/arrow.svg";
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -2968,6 +2961,13 @@ input, select, textarea {
 			width: 2em;
 			z-index: 1;
 		}
+
+/* Scrolly link with no arrow icon */
+
+.scrolly-link {
+	cursor: pointer;
+	color: inherit;
+}
 
 /* Spotlight */
 
